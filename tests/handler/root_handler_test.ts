@@ -6,7 +6,7 @@ Deno.test({
   name: "root path test",
   async fn() {
     const ctx = testing.createMockContext({
-      path: "/a",
+      path: "/",
     });
     const next = testing.createMockNext();
     await rootHandler(ctx, next);
