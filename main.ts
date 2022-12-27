@@ -1,13 +1,13 @@
 import { Application } from "oak";
-import { rootHandler } from "./src/handler/root_handler.ts";
+import { router } from "./router.ts";
 
-const port = 8000;
+const port = 18000;
 const app = new Application();
-
-app.use(rootHandler);
+app.use(router.routes());
+app.use(router.allowedMethods());
 
 app.addEventListener("listen", () => {
-  console.log(`Listening on localhost:${port}`);
+  console.log(`Listening on http://localhost:${port}`);
 });
 
 await app.listen({ port });

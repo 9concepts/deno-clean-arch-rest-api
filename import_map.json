@@ -1,6 +1,7 @@
 {
   "imports": {
     "oak": "https://deno.land/x/oak@v11.1.0/mod.ts",
-    "asserts": "https://deno.land/std@0.170.0/testing/asserts.ts"
+    "asserts": "https://deno.land/std@0.170.0/testing/asserts.ts",
+    "postgres": "https://deno.land/x/postgresjs@v3.3.2/mod.js"
   }
 }

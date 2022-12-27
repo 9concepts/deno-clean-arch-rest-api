@@ -1,0 +1,12 @@
+services:
+  db:
+    container_name: deno-clean-arch-rest-api-db
+    build: ./db/docker
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: deno_world
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d
